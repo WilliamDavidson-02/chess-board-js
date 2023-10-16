@@ -1,0 +1,103 @@
+:root {
+  --black: #585452;
+  --cell-dark: #6f964d;
+  --selected-yellow: #e7da77;
+  --cell-light: #ebeccd;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+.chess-board {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.chess-row {
+  display: flex;
+}
+
+.light-cell {
+  background: var(--cell-light);
+}
+
+.dark-cell {
+  background: var(--cell-dark);
+}
+
+.light-text {
+  color: var(--cell-light);
+}
+
+.dark-text {
+  color: var(--cell-dark);
+}
+
+.cell {
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.number {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.letter {
+  width: 100%;
+  text-align: end;
+  margin-top: auto;
+}
+
+.selected {
+  background: var(--selected-yellow);
+}
+
+.dimentions-container {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  color: var(--black);
+  transform: translateX(-50%);
+  background: var(--selected-yellow);
+  padding: 20px 40px;
+  font-size: 2rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.reset-btn {
+  width: 100%;
+  background: var(--cell-dark);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0;
+  color: var(--cell-light);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
